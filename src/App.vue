@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="ms-4 my-5">
     <div>
-      <ImagenRick v-for="(imagen, i) in imagenes" :key="i" :imgperso="imagen" />
+      <ImagenRick :imgperso="imagenes" />
     </div>
   </div>
 </template>
@@ -48,7 +48,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }

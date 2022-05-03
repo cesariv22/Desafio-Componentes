@@ -1,13 +1,13 @@
 <template>
-  <div class="d-flex mt-4">
-    <div>
+  <div class="mt-4">
+    <div v-for="(imagen, i) in imgperso" :key="i">
       <img
-        :src="imgperso.src"
-        :alt="imgperso.nombre"
+        :src="imagen.src"
+        :alt="imagen.nombre"
         class="img-rick"
         width="120"
       />
-      <p class="d-inline ms-3 name-rick">{{ imgperso.nombre }}</p>
+      <p class="d-inline ms-3 name-rick">{{ imagen.nombre }}</p>
     </div>
   </div>
 </template>
@@ -17,8 +17,8 @@ export default {
   name: "ImagenRick",
   props: {
     imgperso: {
-      type: Object,
-      default: () => {},
+      type: Array,
+      default: () => [],
     },
   },
 };
@@ -34,5 +34,6 @@ export default {
 .img-rick {
   border-radius: 50%;
   width: 120px;
+  margin-top: 1rem;
 }
 </style>
